@@ -5,7 +5,12 @@ MS-02 Ultra是从MS-01的全面升级。最大支持了256GB的ECC内存
 
 此文档包含所有有关MS-02 Ultra有关内存兼容性的Guide  
 
+<font color="#dd0000">购买内存时，请务必参考官方的[内存出厂清单](#内存官方出厂清单)和[QVL清单](#内存qvl清单)</font><br />
+
 MS-02 Ultra的CPU背面有4个DEBUG灯，其中有内存灯，如果是卡CPU/内存，那很有可能是内存原因导致无法启动
+
+
+
 
 ## ECC支持
 由于Intel官方的CPU SKU限制，仅285HX CPU支持ECC内存。 275HX，235HX不支持ECC内存，但是仍然支持最大256GB的内存容量
@@ -74,7 +79,14 @@ MS-02 Ultra实际上能够跑到更高的内存频率上，但是为了能兼容
 > **警告**
 > 超频是一种DIY行为，你需要自己对内存频率的调整负责，MINISFORUM和此文档的制作者不会为你因为调整内存带来的不稳定进而导致的数据丢失等付任何责任。
 
-- MS-02 Ultra内存设计不支持超频内存电压
+超频内存需要先关闭SAGV动态内存省电功能  
+`Advanced` -> `Onboard Devices Setting` -> `SAGV`
+  
+然后在
+`Advanced` -> `Onboard Devices Setting` -> `Maximum Memory Frequency`里面调整频率X
+
+
+- MS-02 Ultra内存设计不支持超内存电压
 - 探索内存频率时，务必至少也要跑完完整的MEMTEST
 - 一般来说，在官方的兼容列表内的内存，插2根的时候，可以最高调到4800，插入4根的时候可以最高调到5200Mhz
 - 对于CSODIMM内存。虽然能够以较高的频率通过MEMTEST测试，但是可能长期使用也会有问题。不建议太高内存频率
