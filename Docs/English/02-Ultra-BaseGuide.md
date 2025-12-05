@@ -50,6 +50,16 @@ This section describes the factory default CPU power settings. PL1 is sustained 
 | 275HX | 100W / 140W    | 90W / 110W       | 32 s           | 90°C              |
 | 235HX | 80W / 100W     | 60W / 100W       | 32 s           | 90°C              |
 
+### Idle Power Consumption
+The MS-02 Ultra (285HX version) includes a very powerful 25Gbps NIC. However, this NIC chip has high power consumption, and idle power draw is nearly identical to load power draw.
+This table compares idle power consumption between systems with and without the 25G NIC installed on the 285HX.
+(Test results are from Windows installations with all drivers installed and no internet connection in idle state)
+
+| CPU | G3 Status | Windows Idle With 25G NIC | Windows Idle NO 25G NIC | BIOS Menu With 25G NIC | BIOS Menu NO 25G NIC |
+|-----|-----------|---------------------------|-------------------------|------------------------|----------------------|
+| 285HX | 1.55W | 9.8-12-13W | 22W | 46.8W | 52.2W |
+
+
 ### SSD Count and Speeds
 With MinisForum's dedicated E810 expansion card installed, the system can support up to 4 SSDs: 2 on the motherboard and 2 on the expansion card. Currently the E810 card ships standard only with 285HX SKUs; 275HX and 235HX SKUs only have the 2 onboard SSDs.
 
