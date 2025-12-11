@@ -26,8 +26,9 @@ Key upgrades include:
 
 ### Usage Tips
 
-### ECC and Memory Details and Memory QVL List
-Reference: [MS-02 Ultra Memory Compatibility Document](/Docs/English/02-Ultra-Memory.md)
+### Other Documents
+ - [MS-02 Ultra Memory Compatibility Document](/Docs/English/02-Ultra-Memory.md)
+ - [MS-02 Ultra Known Issues and Solutions](/Docs/English/02-Ultra-KnowIssue.md)
 
 ### Discrete GPU Notes
 

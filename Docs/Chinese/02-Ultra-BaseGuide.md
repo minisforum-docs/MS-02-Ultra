@@ -28,8 +28,10 @@ MS-02 Ultra 是一个从MS-01全面升级的MINI PC
 
 ### 使用Tips
 
-### ECC内存和内存相关
-参考文档: [MS-02 Ultra内存兼容性文档](/Docs/Chinese/02-Ultra-Memory.md)
+### 其他文档
+ - [MS-02 Ultra内存兼容性文档](/Docs/Chinese/02-Ultra-Memory.md)
+ - [MS-02 Ultra 已知问题以及解决方式](/Docs/Chinese/02-Ultra-KnowIssue.md)
+
 
 ### 独立显卡
 

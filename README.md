@@ -10,6 +10,7 @@ This guide provides a brief introduction to the MS-02 Ultra and includes importa
 - [Base Guide](/Docs/English/02-Ultra-BaseGuide.md) — Overview, hardware, BIOS/firmware tips
 - [MS-02 Ultra Memory](/Docs/English/02-Ultra-Memory.md) — Important, memory compatibility, memory list
 - [MS-02 Ultra Block Diagram](/Datasheet/MS-02-Ultra%20block.drawio.png) — MS-02 Ultra PCIe Blockc Diagram
+- [MS-02 Ultra Known Issues and Solutions](/Docs/English/02-Ultra-KnowIssue.md) - MS-02 Ultra Known Issues and Solutions
 
 
 ## Other language versions
