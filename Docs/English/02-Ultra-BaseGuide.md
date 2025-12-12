@@ -56,7 +56,7 @@ The MS-02 Ultra (285HX version) includes a very powerful 25Gbps NIC. However, th
 This table compares idle power consumption between systems with and without the 25G NIC installed on the 285HX.
 (Test results are from Windows installations with all drivers installed and no internet connection in idle state)
 
-| CPU | G3 Status | Windows Idle With 25G NIC | Windows Idle NO 25G NIC | BIOS Menu With 25G NIC | BIOS Menu NO 25G NIC |
+| CPU | G3 Status | Windows Idle NO 25G NIC | Windows Idle With 25G NIC | BIOS Menu With 25G NIC | BIOS Menu NO 25G NIC |
 |-----|-----------|---------------------------|-------------------------|------------------------|----------------------|
 | 285HX | 1.55W | 9.8-12-13W | 22W | 46.8W | 52.2W |
 

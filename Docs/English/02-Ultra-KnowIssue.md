@@ -61,6 +61,20 @@ This is the preferred fix. Use the DKMS package built for RTL8127.
   - Example: `https://github.com/minisforum-repo/r8127-dkms/releases/download/11.015.00-1/r8127-dkms_11.015.00-1_all.deb`
 
 PVE / Proxmox VE (ensure you have the No-Subscription repository configured):
+Replace the Proxmox VE Enterprise Repository with the No-Subscription Repository:
+
+```bash
+tee /etc/apt/sources.list.d/pve-enterprise.sources > /dev/null << 'EOF'
+Types: deb
+URIs: http://download.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
+```
+
+Then proceed with the installation:
+
 ```bash
 apt update
 apt install dkms pve-headers-$(uname -r)
@@ -79,6 +93,22 @@ dpkg -i r8127-dkms_11.015.00-1_all.deb
 #### Solution 2: Obtain the Latest Driver from Realtek
 Visit: https://www.realtek.com/Download/List?cate_id=584
 Download `10G Ethernet LINUX driver r8127 for kernel up to 6.15` and upload it to MS-02 Ultra, then extract.
+
+PVE / Proxmox VE (ensure you have the No-Subscription repository configured):
+Replace the Proxmox VE Enterprise Repository with the No-Subscription Repository:
+
+```bash
+tee /etc/apt/sources.list.d/pve-enterprise.sources > /dev/null << 'EOF'
+Types: deb
+URIs: http://download.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
+```
+
+Then proceed with the installation:
+
 
 ```bash
 apt update

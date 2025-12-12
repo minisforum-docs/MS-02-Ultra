@@ -57,7 +57,7 @@ MS-02 Ultra 是一个从MS-01全面升级的MINI PC
 MS-02 Ultra（285HX版本）附带一张非常强的25Gbps网卡。但此网卡芯片功耗也很高，而且待机功率和负载功率几乎一样。
 此表格对比插入25G网卡后，和没插网卡的285HX的功耗。
 (测试结果为 安装完Windows并装好所有驱动，没有连接互联网的idle情况)
-|  CPU | G3 Status |Windows Idle With 25G NIC | Windows Idle NO 25G NIC | BIOS Menu With 25G NIC | BIOS Menu NO 25G NIC |
+|  CPU | G3 Status |Windows Idle NO 25G NIC | Windows Idle With 25G NIC | BIOS Menu With 25G NIC | BIOS Menu NO 25G NIC |
 |-----------|--------------|---|---|--------------|--------------|
 | 285HX| 1.55W |9.8-12-13W| 22W | 46.8W | 52.2W |
 

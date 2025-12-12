@@ -56,6 +56,15 @@ Linux 某个内核版本内的自带的r8169驱动，在关机时，会把RTL812
 
 PVE系统
 (需要先替换掉 Proxmox VE No-Subscription Repository)
+```bash
+tee /etc/apt/sources.list.d/pve-enterprise.sources > /dev/null << 'EOF'
+Types: deb
+URIs: http://download.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
+```
 下载并上传 此 dkms驱动包: https://github.com/minisforum-repo/r8127-dkms/releases/download/11.015.00-1/r8127-dkms_11.015.00-1_all.deb
 ``` bash
 # 确认已安装Proxmox VE No-Subscription Repository
@@ -81,6 +90,18 @@ dpkg -i r8127-dkms_11.015.00-1_all.deb
 #### 解决方案2: 直接从RTL官方下载最新的驱动
 访问网站: https://www.realtek.com/Download/List?cate_id=584
 下载 `10G Ethernet LINUX driver r8127 for kernel up to 6.15` 并上传MS-02 Ultra然后解压
+
+PVE系统
+(需要先替换掉 Proxmox VE No-Subscription Repository)
+```bash
+tee /etc/apt/sources.list.d/pve-enterprise.sources > /dev/null << 'EOF'
+Types: deb
+URIs: http://download.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
+```
 
 ```
 
