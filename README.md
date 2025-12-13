@@ -12,6 +12,15 @@ This guide provides a brief introduction to the MS-02 Ultra and includes importa
 - [MS-02 Ultra Block Diagram](/Datasheet/MS-02-Ultra%20block.drawio.png) — MS-02 Ultra PCIe Blockc Diagram
 - [MS-02 Ultra Known Issues and Solutions](/Docs/English/02-Ultra-KnowIssue.md) - MS-02 Ultra Known Issues and Solutions
 
+## Cannot boot?
+
+If your MS-02 Ultra fails to start, follow these two guides to diagnose and resolve common boot issues:
+
+- [MS-02 Ultra Known Issues and Solutions](/Docs/English/02-Ultra-KnowIssue.md) - MS-02 Ultra Known Issues and Solutions
+- [MS-02 Ultra Memory](/Docs/English/02-Ultra-Memory.md) — Important, memory compatibility, memory list
+
+If the issue persists, open an issue and include the firmware/OS version, exact symptoms, and any error messages or logs.
+
 
 ## Other language versions
 
