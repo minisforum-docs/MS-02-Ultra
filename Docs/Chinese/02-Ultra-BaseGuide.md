@@ -78,6 +78,11 @@ MS-02 Ultra使用EC控制器控制风扇转速。
 启用后，会出现4个温度点和4个PWM值，PWM值最大为250，250时风扇的满转速。
 
 ### VPRO功能
+
+> **Note**
+> 1. 你需要下载Meshcommander软件 (https://www.meshcommander.com/)，才能使用远程KVM功能。
+> 2. 远程KVM功能要求必须集成显卡启用了，并且有插入显示输出
+
 因为 Intel的CPU限制，目前仅285HX的CPU支持VPRO功能。  
 所以285HX的版本的2.5G 网卡为I226-LM，芯片组为WM880, 而275HX/235HX版本的2.5G网卡为I226-V芯片组为HM870。  
 仅285HX的版本支持 AMT远程控制技术。  

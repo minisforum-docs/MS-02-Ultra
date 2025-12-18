@@ -76,6 +76,11 @@ MS-02 Ultra uses an EC controller to manage fan speed. Users can adjust fan curv
 When User Mode is enabled you can set 4 temperature points and 4 PWM values. PWM ranges up to 250; PWM = 250 corresponds to full fan speed.
 
 ### vPro (AMT) Support
+
+> **Note**
+> 1. You must download the MeshCommander (https://www.meshcommander.com/) software to use the remote KVM feature.
+> 2. The remote KVM feature requires the integrated GPU to be enabled and a display output connected.
+
 Due to Intel CPU limitations, vPro (AMT) is supported only on 285HX systems.
 
 - The 2.5G NIC on 285HX SKUs is I226-LM with WM880 chipset; 275HX/235HX SKUs use I226-V with HM870.
