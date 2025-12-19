@@ -86,6 +86,13 @@ apt install dkms linux-headers-$(uname -r)
 dpkg -i r8127-dkms_11.015.00-1_all.deb
 # 安装完成后 重启系统测试一下
 ```
+验证是否安装成功   
+```bash
+lsmod | grep r8127
+
+#显示以下内容安装成功，没有显示任何内容则安装失败
+#r8127  xxxxxxx 0
+```
 
 #### 解决方案2: 直接从RTL官方下载最新的驱动
 访问网站: https://www.realtek.com/Download/List?cate_id=584
@@ -120,5 +127,11 @@ apt install gcc make  linux-headers-$(uname -r)
 cd r8127-11.015.00
 ./autorun.sh
 ```
+验证是否安装成功   
+```bash
+lsmod | grep r8127
 
+#显示以下内容安装成功，没有显示任何内容则安装失败
+#r8127  xxxxxxx 0
+```
 

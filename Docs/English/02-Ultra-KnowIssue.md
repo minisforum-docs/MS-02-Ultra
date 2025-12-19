@@ -90,6 +90,15 @@ dpkg -i r8127-dkms_11.015.00-1_all.deb
 # Reboot and test
 ```
 
+Verify whether the installation succeeded
+```bash
+lsmod | grep r8127
+
+# The following output indicates successful installation; if nothing is displayed, the installation failed
+# r8127  xxxxxxx 0
+```
+
+
 #### Solution 2: Obtain the Latest Driver from Realtek
 Visit: https://www.realtek.com/Download/List?cate_id=584
 Download `10G Ethernet LINUX driver r8127 for kernel up to 6.15` and upload it to MS-02 Ultra, then extract.
@@ -127,4 +136,10 @@ cd r8127-11.015.00
 ./autorun.sh
 ```
 
+Verify whether the installation succeeded
+```bash
+lsmod | grep r8127
 
+# The following output indicates successful installation; if nothing is displayed, the installation failed
+# r8127  xxxxxxx 0
+```
