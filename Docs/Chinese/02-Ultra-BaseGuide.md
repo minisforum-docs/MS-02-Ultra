@@ -3,7 +3,7 @@
 MS-02 Ultra 是一个从MS-01全面升级的MINI PC  
 此Guide对 MS-02 Ultra做一个简单的介绍，并且附上有关MS-02 Ultra有关内存兼容性，玩法等重要信息。
 
-<font color="#dd0000">另外购买内存时，请务必参考官方的[内存出厂清单](#内存官方出厂清单)和[QVL清单](#内存qvl清单)</font><br />
+<font color="#dd0000">另外购买内存时，请务必参考官方的[内存出厂清单](/Docs/Chinese/02-Ultra-Memory.md#内存官方出厂清单)和[QVL清单](/Docs/Chinese/02-Ultra-Memory.md#内存qvl清单)</font><br />
 
 
 
