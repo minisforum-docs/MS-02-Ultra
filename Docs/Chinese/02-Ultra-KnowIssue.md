@@ -158,19 +158,24 @@ vfio-pci 0000:01:00.0: Unable to change power state from D3cold to D0, device in
 将 `ClkReq for Pcie x16 Slot Clock` 更改为 `Platform-POR`
 即可解决此问题。
 
-为了兼容性，此插槽默认禁用ASPM并强制推送时钟。
-而显卡的D3省电状态和强制时钟推送之间存在功能冲突。
-如果收到以下错误
+## Pcie5.0x16插槽接入Eop4a接入DEG1/2-与独立显卡无法正常使用
 
-```
-vfio-pci 0000:01:00.0: Unable to change power state from D3cold to D0, device inaccessible
-```
+当 PCIe 5.0 x16 插槽启用 ASPM 和 CLK_REQ 功能时，使用 EOP4A 扩展卡连接外部 OCuLink 设备（例如显卡）可能导致系统无法启动。该问题已在 Intel Arc Pro B60 和 AMD RX 9060 XT LP 上验证，均出现无法载入操作系统的情况。
 
-很可能遇到了此问题。
+###解决方法 
 
 在BIOS设置 `Advanced` -> `Onboard Devices Setting` -> `PCI-E Port`
-将 `Pcie x16 Slot - Clock assignment` 更改为 `Platform-POR`
-将 `ClkReq for Pcie x16 Slot Clock` 更改为 `Platform-POR`
+
+将 `Pcie x16 Slot` - `Clock assignment` 更改为 `Enabled`
+
+将 `ClkReq for Pcie x16 Slot Clock `更改为`Disabled`
+
+将 `Pcie x16 Slot-Device1` 更改为` Enabled`
+
+将 `ASPM` 更改为 `Disabled`
+
+将 `L1 Substates` 更改为`Disabled`
+
+将 `PCIe Speed` 更改为 `Gen4`
+
 即可解决此问题。
-
-
