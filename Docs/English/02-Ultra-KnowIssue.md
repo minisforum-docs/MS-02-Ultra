@@ -8,6 +8,7 @@ This document lists all known issues for released MS-02 Ultra models and their c
 - [PCIe SMBus Causing Boot Failure](#pcie-smbus-causing-boot-failure)
 - [RTL8127 Driver Leaves Device Unbootable After Shutdown](#rtl8127-driver-leaves-device-unbootable-after-shutdown)
 - [PCIe5.0x16 Slot Cannot using PCIe Passthough](#pcie50x16-slot-cannot-using-pcie-passthough)
+- [PCIe 5.0 x16 with EOP4A and DEG1/2 external GPU fails to boot into OS](#pcie-50-x16-with-eop4a-and-deg12-external-gpu-fails-to-boot-into-os)
 
 ## PCIe SMBus Causing Boot Failure
 
@@ -159,3 +160,28 @@ In BIOS Setting `Advanced` -> `Onboard Devices Setting` -> `PCI-E Port`
 `Pcie x16 Slot - Clock assignment` Change to `Platform-POR`  
 `ClkReq for Pcie x16 Slot Clock` Change to `Platform-POR`  
 Will fix this issue.
+
+## EOP4A installed in PCIe 5.0 x16 slot (DEG1/2) causes dedicated GPU malfunction
+
+When ASPM and CLK_REQ are enabled for the PCIe 5.0 x16 slot, using the EOP4A expansion card to connect external OCuLink devices (e.g., graphics cards) may result in boot failure. This issue has been verified on Intel Arc Pro B60 and AMD RX 9060 XT LP, which fail to load the operating system.
+
+### Solution
+
+Access the BIOS and navigate to:
+`Advanced` -> `Onboard Devices Setting` -> `PCI-E Port`
+
+Apply the following settings:
+Set `Pcie x16 Slot` - `Clock assignment` to `Enabled`
+
+Set `ClkReq for Pcie x16 Slot Clock `to `Disabled`
+
+Set `Pcie x16 Slot-Device1` to` Enabled`
+
+Set `ASPM` to `Disabled`
+
+Set `L1 Substates` to `Disabled`
+
+Set `PCIe Speed` to `Gen4`
+
+The problem will be resolved after applying these configurations.
+

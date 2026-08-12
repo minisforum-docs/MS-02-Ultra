@@ -8,6 +8,7 @@
 - [PCIe SMBus导致无法开机](#pcie-smbus导致无法开机)
 - [RTL8127 驱动问题关机后导致无法再次开机](#rtl8127-驱动问题关机后导致无法再次开机)
 - [PCIe5.0x16 插槽无法使用PCIe Passthrough](#pcie5.0x16插槽无法使用pcie直通)
+- [PCIe5.0x16插槽接入EOP4A接入DEG1/2 与独立GPU无法正常使用](#pcie5.0x16插槽接入eop4a接入deg1-2-与独立gpu无法正常使用)
 
 ## PCIe SMBus导致无法开机
 
