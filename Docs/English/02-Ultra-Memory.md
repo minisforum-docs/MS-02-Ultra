@@ -73,7 +73,7 @@ This list shows non-official but tested compatible memory. If two DIMMs work, fo
 
 | Memory brand & model | Capacity | ECC | Pass | 2-DIMM freq | 4-DIMM freq | Native freq | Rank | Failure notes |
 |----------------------|---------:|:---:|:----:|------------:|------------:|------------:|:----:|---------------|
-| SK Hynix HMCG88AGBAA095N | 32 GB | NO | ✅ | 4400 MHz |  | 5600 MHz | 2R | |
+| SK Hynix HMCG88AGBAA095N | 32 GB | YES (SMBIOS-reported) | ✅ | 4400 MT/s | 5200 MT/s (short test) | 5600 MT/s | 2R | One 4-DIMM/128 GB system; see validation note below |
 | SAMSUNG M425R4GA3BB0-CWMOL | 32 GB | NO | ❌ | 4400 MHz |  | 5600 MHz | 2R | Burn-in test error / hang |
 | Crucial HMCG88AGBAA095N | 48 GB | NO | ✅ | 4400 MHz |  | 5600 MHz | 2R | |
 | TeamGroup TED532G4800C40-SBK | 32 GB | NO | ✅ | 4400 MHz |  | 5600 MHz | 2R | |
@@ -90,6 +90,8 @@ This list shows non-official but tested compatible memory. If two DIMMs work, fo
 | Lenovo Generic N Series | 16 GB | NO | ✅ | 4400 / 4800 MHz | 4400 MHz | 5600 MHz | 1R | |
 | Crucial CT48G56C46S5.M16C1 | 48 GB | NO | ✅ | 5200 MHz |  | 5600 MHz | 2R | |
 | Crucial CT32G56C46S5.M8B1 | 32 GB | NO | ✅ | 5600MHz |  | 5600 MHz | 1R | |
+
+**SK Hynix HMCG88AGBAA095N single-system validation note:** On one 285HX system with BIOS 1.04 and four matching 32 GB 2R modules (128 GB total), each module reported Total Width 80 bits and Data Width 64 bits, while the physical memory array reported Single-bit ECC in SMBIOS. This documents firmware-reported ECC; ECC correction was not independently tested. The modules were configured at 5200 MT/s and rated at 5600 MT/s. On Linux `7.0.14-5-pve`, a guarded `stress-ng` run used two `--vm` stressor workers, 75% of available memory, `--vm-method all`, and verification for 480 seconds. `stress-ng` reported 2 passed and 0 failed, with no MCE or RAS memory errors observed during the run. No full MemTest or long soak has been completed. Treat 4-DIMM operation at 5200 MT/s and the ECC reporting as single-system community observations, not universal guarantees.
 
 
 ### Memory Community Test Passlist
@@ -119,4 +121,3 @@ Overclocking is a DIY activity. You are responsible for any instability or data 
 | Crucial CT48G56C46S5.M16C1 | 48 GB | 4800 MHz | 5200 MHz | NO |
 | Crucial CT64G56C46S5.M16C1 | 64 GB | 4800 MHz | 5200 MHz | NO |
 | Crucial CT32G56C46S5.C8BA(Y53A) | 32 GB | Wait for test | Wait for test | NO |
-
