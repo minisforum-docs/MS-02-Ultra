@@ -99,6 +99,7 @@ This list shows non-official but tested compatible memory. If two DIMMs work, fo
 |----------------------|---------:|:---:|:----:|------------:|------------:|------------:|:----:|---------------|
 | Crucial CT2K16G56C46S5 | 16 GB | NO | ✅ | 4800 MHz |  |5600Mhz| 1R | |
 | Crucial CT16G48C40S5 | 16 GB | NO | ✅ | 4400 MHz |  |4800Mhz| 1R | System will be unstable at 4800Mhz, operate at 4400Mhz |
+| Kingston Fury Impact kf556s40ibk2-64 | 2x32 GB | NO | ✅ | 4400 MHz |  |5600Mhz| 2R |  |
 
 ## Maximum Memory Frequency / Overclocking
 
